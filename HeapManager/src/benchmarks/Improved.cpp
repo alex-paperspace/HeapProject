@@ -17,7 +17,7 @@ namespace benchmark {
 			pool::MemoryPool<Point> somepool(1);
 		}
 		catch (const std::invalid_argument& e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << "Invalid arg: " << e.what() << "\nExiting..." << std::endl;
 			exit(EXIT_FAILURE);
 		}
 		

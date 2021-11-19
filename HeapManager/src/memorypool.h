@@ -26,7 +26,6 @@ namespace pool {
 			delete[] m_buffer;
 		}
 
-		template<class T>
 		T* allocate(size_t size) {
 			for (auto it = m_used.begin(); it != m_used.end(); ++it) {
 				//if (it->second)
@@ -36,7 +35,6 @@ namespace pool {
 			return retptr;
 		}
 
-		template<class T>
 		void deallocate(T*& dptr) {
 
 

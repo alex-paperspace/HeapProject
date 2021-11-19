@@ -20,7 +20,7 @@ namespace printutil {
 
 	void printAverageHeader() {
 		std::cout << std::setw(15) << "Benchmark-Name" \
-			<< std::setw(15) << "Average Time" \
+			<< std::setw(15) << "Avg Time(s)" \
 			<< std::endl;
 	}
 }

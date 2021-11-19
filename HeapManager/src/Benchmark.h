@@ -5,7 +5,7 @@
 
 namespace benchmark {
 
-	const int gc_benchmark_iterations = 1000000;
+	const int gc_benchmark_iterations = 256;
 
 	typedef std::chrono::duration<double> ChronoDuration;
 

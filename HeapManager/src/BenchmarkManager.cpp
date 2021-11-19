@@ -30,7 +30,7 @@ void BenchmarkManager::runBenchmarks(int numEach) {
 			average += benchmarkTime;
 			std::cout << std::setw(15) << currentBenchmark->getName() \
 				<< std::setw(15) << i \
-				<< std::setw(15) << benchmarkTime \
+				<< std::setw(15) << std::fixed << std::setprecision(6) << benchmarkTime \
 				<< std::endl;
 		}
 		average /= numEach;
@@ -44,8 +44,8 @@ void BenchmarkManager::runBenchmarks(int numEach) {
 void BenchmarkManager::printAverages() {
 	printutil::printAverageHeader();
 	for (auto const& x : m_averages) {
-		std::cout << std::setw(15) << x.first \
-			<< std::setw(15) << x.second \
+		std::cout << std::setw(15) << std::fixed << std::setprecision(6) << x.first \
+			<< std::setw(15) << std::fixed << std::setprecision(6) << x.second \
 			<< std::endl;
 	}
 }

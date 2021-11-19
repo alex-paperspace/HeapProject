@@ -13,10 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{7f911992-f908-4091-bbf4-58fc1b86e19c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\data">
+      <UniqueIdentifier>{769d6937-4bc7-427a-a7f5-12716b58fd3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\benchmarks">
+      <UniqueIdentifier>{f401d2d4-96d2-4880-bc9f-3e6d28ad9d52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{cf6f268a-85e1-40af-ac51-0d8f5d7769cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\data">
+      <UniqueIdentifier>{ccdc2f1e-b757-48e7-9e5e-9ace885964a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\benchmarks">
+      <UniqueIdentifier>{5d428b80-1702-40ec-a447-63d8a81c703d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HeapManager.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\benchmarks\Baseline.cpp">
+      <Filter>Source Files\src\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\benchmarks\Improved.cpp">
+      <Filter>Source Files\src\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data\Point.cpp">
+      <Filter>Source Files\src\data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Benchmark.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BenchmarkManager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HeapManager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memorypool.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\printutil.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Benchmark.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BenchmarkManager.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HeapManager.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memorypool.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\printutil.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\Benchmarks.h">
+      <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\Baseline.h">
+      <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\Improved.h">
+      <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\Point.h">
+      <Filter>Header Files\src\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\datatypes.h">
+      <Filter>Header Files\src\data</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

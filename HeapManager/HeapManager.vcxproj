@@ -151,7 +151,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="HeapManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Benchmark.cpp" />
+    <ClCompile Include="src\BenchmarkManager.cpp" />
+    <ClCompile Include="src\benchmarks\Baseline.cpp" />
+    <ClCompile Include="src\benchmarks\Improved.cpp" />
+    <ClCompile Include="src\data\Point.cpp" />
+    <ClCompile Include="src\HeapManager.cpp" />
+    <ClCompile Include="src\memorypool.cpp" />
+    <ClCompile Include="src\printutil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Benchmark.h" />
+    <ClInclude Include="src\BenchmarkManager.h" />
+    <ClInclude Include="src\benchmarks\Baseline.h" />
+    <ClInclude Include="src\benchmarks\Benchmarks.h" />
+    <ClInclude Include="src\benchmarks\Improved.h" />
+    <ClInclude Include="src\data\datatypes.h" />
+    <ClInclude Include="src\data\Point.h" />
+    <ClInclude Include="src\HeapManager.h" />
+    <ClInclude Include="src\memorypool.h" />
+    <ClInclude Include="src\printutil.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

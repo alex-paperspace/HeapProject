@@ -17,17 +17,16 @@ namespace benchmark {
 
 		using namespace pool;
 
-		PoolList<Point>* pool = new PoolList<Point>(m_pgeneric_vector_size);
+		PoolList<Point> pool(m_pgeneric_vector_size);
 
 		for (int i = 0; i < m_pgeneric_vector_size; ++i) {
-			m_pgeneric_vector[i] = new (pool->allocate()) Point();
+			m_pgeneric_vector[i] = new (pool.allocate()) Point();
 		}
 
 		for (int i = 0; i < m_pgeneric_vector_size; ++i) {
-			pool->deallocate(m_pgeneric_vector[i]);
+			pool.deallocate(m_pgeneric_vector[i]);
 		}
 
-		delete pool;
 	}
 
 }

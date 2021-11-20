@@ -9,35 +9,37 @@ namespace pool {
 		T data;
 		Node* next;
 		Node() { next = nullptr; }
-		Node& operator=(const T& t) { 
-			data = t;
-			return *this;
-		}
 	};
 
 	template<class T>
 	class PoolList {
+		Node<T>* _head;
 		Node<T>* head;
 	public:
-		PoolList(int count) {
+		PoolList(int count) :
+			head(nullptr)
+		{
 			if (count < 1) {
 				assert(!"Specified Node count invalid.");
 			}
-			head = new Node<T>;
+			_head = (Node<T>*)calloc(count, sizeof(Node<T>));
+			head = _head;
 			Node<T>* cur = head;
 			for (int i = 1; i < count; ++i) {
-				cur->next = new Node<T>;
+				cur->next = new (cur + 1) Node<T>();
 				cur = cur->next;
 			}
 		}
 
 		~PoolList() {
-			Node<T>* cur = head;
+			free(_head);
+			/*Node<T>* cur = head;
 			while (cur != nullptr) {
 				head = head->next;
+				std::cout << sizeof(*cur) << std::endl;
 				delete cur;
 				cur = head;
-			}
+			}*/
 		}
 
 		Node<T>* front() const {
@@ -50,7 +52,6 @@ namespace pool {
 			}
 			Node<T>* ret = head;
 			head = head->next;
-			*ret = T();
 			return ret;
 		}
 

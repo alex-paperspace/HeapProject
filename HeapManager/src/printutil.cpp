@@ -23,5 +23,6 @@ namespace printutil {
 			<< std::setw(15) << "Avg Time(s)" \
 			<< std::endl;
 	}
+
 }
  

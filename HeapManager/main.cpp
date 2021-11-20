@@ -1,7 +1,6 @@
 #include <iostream>
 #include <memory>
 #include <iomanip>
-#include "src/HeapManager.h"
 #include "src/BenchmarkManager.h"
 #include "src/benchmarks/Benchmarks.h"
 #include "src/printutil.h"

@@ -8,7 +8,7 @@ namespace benchmark {
 
 	class Improved : public Benchmark {
 	private:
-		size_t m_pgeneric_vector_size;
+		int m_pgeneric_vector_size;
 		std::vector<Point *> m_pgeneric_vector;
 	protected:
 		void BenchmarkImpl() override;

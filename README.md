@@ -53,3 +53,12 @@ This is a framework for developers to develop, run and compare heap allocation s
 - Fragmentation analyzer of benchmarks. For example, a report of the Improved benchmark would (hopefully) report a fragmentation percentage of 0, since memory is only allocated based on (*item count \* sizeof(item)*).
 - Type checking when a client constructs their object in address returned by *allocate()*
 - Benchmark-dependent operator overloading, so the user does not have to use placement new.
+
+## Some example runs
+
+Allocating 100,000,000 **Point** objects
+
+*Baseline vs. Improved*
+
+<img src="https://user-images.githubusercontent.com/91897211/142773922-d0e46f0b-55a2-49bf-a478-c630715e7ea4.png" width="400">
+

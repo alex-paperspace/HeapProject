@@ -45,9 +45,6 @@
     <ClCompile Include="src\data\Point.cpp">
       <Filter>Source Files\src\data</Filter>
     </ClCompile>
-    <ClCompile Include="src\Benchmark.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\BenchmarkManager.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -60,11 +57,11 @@
     <ClCompile Include="src\printutil.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\benchmarks\Benchmark.cpp">
+      <Filter>Source Files\src\benchmarks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Benchmark.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
     <ClInclude Include="src\BenchmarkManager.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
@@ -77,9 +74,6 @@
     <ClInclude Include="src\printutil.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
-    <ClInclude Include="src\benchmarks\Benchmarks.h">
-      <Filter>Header Files\src\benchmarks</Filter>
-    </ClInclude>
     <ClInclude Include="src\benchmarks\Baseline.h">
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
@@ -91,6 +85,15 @@
     </ClInclude>
     <ClInclude Include="src\data\datatypes.h">
       <Filter>Header Files\src\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\meta.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\Benchmark.h">
+      <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\benchmarktypes.h">
+      <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

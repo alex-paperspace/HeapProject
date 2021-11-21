@@ -3,8 +3,10 @@
 #include <iomanip>
 #include <cassert>
 #include "printutil.h"
+#include "data/datatypes.h"
 
-BenchmarkManager::BenchmarkManager() {
+BenchmarkManager::BenchmarkManager()
+{
 
 }
 
@@ -20,10 +22,6 @@ void BenchmarkManager::runBenchmarks(int numEach) {
 	while (!m_benchmarksToRun.empty()) {
 		SharedBenchmark currentBenchmark = m_benchmarksToRun.front();
 		m_benchmarksToRun.pop();
-		if (!currentBenchmark->isReady()) {
-			assert(!"Unready benchmark should not be pushed to queue.");
-			break;
-		}
 		double average = 0;
 		for (int i = 1; i <= numEach; ++i) {
 			double benchmarkTime = currentBenchmark->runBenchmark().count();
@@ -39,6 +37,27 @@ void BenchmarkManager::runBenchmarks(int numEach) {
 	printutil::printBreak();
 	std::cout << "All benchmarks finished." << std::endl;
 	printutil::printBreak();
+}
+
+void BenchmarkManager::setup() {
+	std::cout << "Welcome to Heap Benchmarker.\nPlease specify how many items each benchmark should allocate:\n";
+
+	{
+		int intra, iters;
+		std::cin >> intra;
+		std::cout << "Please specify how many iterations to run on each Benchmark:\n";
+		std::cin >> iters;
+		if (intra < 1 || iters < 1) {
+			throw std::invalid_argument("Invalid inputs.");
+		}
+		else {
+			m_meta.intra_benchmark_iterations = intra;
+			m_meta.benchmark_iterations = iters;
+		}
+	}
+	
+	printutil::printBreak();
+	printutil::printColumns();
 }
 
 void BenchmarkManager::printAverages() {

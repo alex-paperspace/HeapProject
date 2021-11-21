@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../Benchmark.h"
+#include "Benchmark.h"
 #include "../data/datatypes.h"
+#include "../meta.h"
 #include <vector>
 
 namespace benchmark {
@@ -13,7 +14,7 @@ namespace benchmark {
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		Baseline();
+		explicit Baseline(const Meta& meta);
 	};
 
 }

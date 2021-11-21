@@ -11,6 +11,10 @@ namespace pool {
 		Node() { next = nullptr; }
 	};
 
+	/*PoolList, a SinglyLL solution for allocating memory to fixed size objects from a block.
+	No management is necessary. Once PoolList is destructed, all memory is freed.
+	Sees significant speedups when allocating many objects of the same size.*/
+
 	template<class T>
 	class PoolList {
 		Node<T>* _head;
@@ -33,17 +37,6 @@ namespace pool {
 
 		~PoolList() {
 			free(_head);
-			/*Node<T>* cur = head;
-			while (cur != nullptr) {
-				head = head->next;
-				std::cout << sizeof(*cur) << std::endl;
-				delete cur;
-				cur = head;
-			}*/
-		}
-
-		Node<T>* front() const {
-			return head;
 		}
 
 		Node<T>* allocate() {
@@ -55,8 +48,9 @@ namespace pool {
 			return ret;
 		}
 
-		void deallocate(T* ptr) {
+		void deallocate(T*& ptr) {
 			Node<T>* cur = reinterpret_cast<Node<T>*>(ptr);
+			ptr = nullptr;
 			cur->next = head;
 			head = cur;
 		}

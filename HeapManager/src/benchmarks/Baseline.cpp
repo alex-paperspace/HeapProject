@@ -3,12 +3,11 @@
 
 namespace benchmark {
 
-	Baseline::Baseline() :
-		m_pgeneric_vector_size(gc_benchmark_iterations) ,
-		m_pgeneric_vector(gc_benchmark_iterations)
+	Baseline::Baseline(const Meta& meta) :
+		m_pgeneric_vector_size(meta.intra_benchmark_iterations) ,
+		m_pgeneric_vector(meta.intra_benchmark_iterations)
 	{
 		m_name = "Baseline";
-		m_ready = true;
 	}
 
 	void Baseline::BenchmarkImpl() {

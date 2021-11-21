@@ -2,7 +2,8 @@
 
 #include <queue>
 #include <map>
-#include "Benchmark.h"
+#include "benchmarks/Benchmark.h"
+#include "meta.h"
 
 typedef std::shared_ptr<benchmark::Benchmark> SharedBenchmark;
 
@@ -16,6 +17,7 @@ private:
 
 	std::queue<SharedBenchmark> m_benchmarksToRun;
 	std::map < std::string, double > m_averages;
+
 public:
 
 	static BenchmarkManager& getInstance() {
@@ -23,8 +25,12 @@ public:
 		return instance;
 	}
 
+	Meta m_meta;
+
 	void pushBenchmark(const SharedBenchmark& benchmark);
 	void runBenchmarks(int numEach = 1);
-	void printAverages();
+
+	void setup();
+	void printAverages();	
 };
 

@@ -48,9 +48,6 @@
     <ClCompile Include="src\BenchmarkManager.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\HeapManager.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\memorypool.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -63,9 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BenchmarkManager.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\HeapManager.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="src\memorypool.h">

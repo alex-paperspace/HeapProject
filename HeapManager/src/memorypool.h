@@ -17,17 +17,13 @@ namespace pool {
 
 	template<class T>
 	class PoolList {
-		Node<T>* _head;
+		Node<T>* const _head;
 		Node<T>* head;
 	public:
 		PoolList(int count) :
-			head(nullptr)
+			_head((Node<T>*)calloc(count, sizeof(Node<T>))) ,
+			head(_head)
 		{
-			if (count < 1) {
-				assert(!"Specified Node count invalid.");
-			}
-			_head = (Node<T>*)calloc(count, sizeof(Node<T>));
-			head = _head;
 			Node<T>* cur = head;
 			for (int i = 1; i < count; ++i) {
 				cur->next = new (cur + 1) Node<T>();

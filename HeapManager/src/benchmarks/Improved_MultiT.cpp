@@ -21,14 +21,16 @@ namespace benchmark {
 			m_pvector1[i] = new (mempool.allocate()) type_1;
 		}
 
+		/*
 		for (int i = 0; i < m_pvector1_size; ++i) {
 			mempool.deallocate(m_pvector1[i]);
 		}
+		*/
 
 		/*
-		We deallocate memory used by int vector ^ and allocate it for use by the double vector below.
+		If we uncomment above, we deallocate memory used by int vector ^ and allocate it for use by the double vector below.
 		of course, the double vector will end up allocating new memory if
-		(sizeof(int) * # of ints to allocate) < (sizeof(double) * # of doubles to allocate)
+		(sizeof(int) * # of ints to allocate) < (sizeof(double) * # of doubles to allocate).
 		This is why the initial mempool allocation allocates (m_total_iterations * sizeof(Node<Types...>).
 		sizeof(Node<Types...>) is going to use the largest size of all the template types.
 		*/

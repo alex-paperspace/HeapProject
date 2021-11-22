@@ -2,55 +2,55 @@
 
 namespace pool {
 	
+	/*
+	FixedPool is exactly this class, but with the additional ability to allocate several types.
+	However, there seems to be a noticeable performance penalty when using FixedPool with just one type.
+	Therefore, use Pool_OneT if you need to just use one type.
+	*/
 
-	//obsolete now that FixedPool exists, which can act as a Pool_OneT anyway.
+	template<class T>
+	union _Node {
+		T data;
+		_Node* next;
+		_Node() { next = nullptr; }
+	};
 
-	//template<class T>
-	//union Node {
-	//	T data;
-	//	Node* next;
-	//	Node() { next = nullptr; }
-	//};
+	template<class T>
+	class Pool_OneT {
+		_Node<T>* const _head;
+		_Node<T>* head;
+	public:
+		Pool_OneT(int count) :
+			_head((_Node<T>*)calloc(count, sizeof(_Node<T>))) ,
+			head(_head)
+		{
+			_Node<T>* cur = head;
+			for (int i = 1; i < count; ++i) {
+				cur->next = new (cur + 1) _Node<T>();
+				cur = cur->next;
+			}
+		}
 
-	///*PoolList, a SinglyLL solution for allocating memory to fixed size objects from a block.
-	//No management is necessary. Once PoolList is destructed, all memory is freed.*/
+		~Pool_OneT() {
+			free(_head);
+		}
 
-	//template<class T>
-	//class Pool_OneT {
-	//	Node<T>* const _head;
-	//	Node<T>* head;
-	//public:
-	//	Pool_OneT(int count) :
-	//		_head((Node<T>*)calloc(count, sizeof(Node<T>))) ,
-	//		head(_head)
-	//	{
-	//		Node<T>* cur = head;
-	//		for (int i = 1; i < count; ++i) {
-	//			cur->next = new (cur + 1) Node<T>();
-	//			cur = cur->next;
-	//		}
-	//	}
+		_Node<T>* allocate() {
+			if (head == nullptr) {
+				return nullptr;
+			}
+			_Node<T>* ret = head;
+			head = head->next;
+			return ret;
+		}
 
-	//	~Pool_OneT() {
-	//		free(_head);
-	//	}
-
-	//	Node<T>* allocate() {
-	//		if (head == nullptr) {
-	//			return nullptr;
-	//		}
-	//		Node<T>* ret = head;
-	//		head = head->next;
-	//		return ret;
-	//	}
-
-	//	void deallocate(T*& ptr) {
-	//		Node<T>* cur = reinterpret_cast<Node<T>*>(ptr);
-	//		ptr = nullptr;
-	//		cur->next = head;
-	//		head = cur;
-	//	}
-	//};
+		void deallocate(T*& ptr) {
+			_Node<T>* cur = reinterpret_cast<_Node<T>*>(ptr);
+			ptr = nullptr;
+			cur->next = head;
+			head = cur;
+		}
+	};
 
 }
 

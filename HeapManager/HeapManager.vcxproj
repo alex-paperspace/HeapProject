@@ -160,7 +160,6 @@
     <ClCompile Include="src\benchmarks\Benchmark.cpp" />
     <ClCompile Include="src\benchmarks\Improved.cpp" />
     <ClCompile Include="src\data\Point.cpp" />
-    <ClCompile Include="src\memorypool.cpp" />
     <ClCompile Include="src\printutil.cpp" />
   </ItemGroup>
   <ItemGroup>

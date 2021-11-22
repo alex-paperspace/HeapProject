@@ -48,9 +48,6 @@
     <ClCompile Include="src\BenchmarkManager.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\memorypool.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\printutil.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>

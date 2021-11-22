@@ -1,5 +1,4 @@
 #include "Baseline.h"
-#include <iostream>
 
 namespace benchmark {
 

@@ -1,7 +1,5 @@
 #include "Improved.h"
 #include "../memorypool.h"
-#include <iostream>
-
 
 namespace benchmark {
 

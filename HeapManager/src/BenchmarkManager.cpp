@@ -1,7 +1,6 @@
 #include "BenchmarkManager.h"
 #include <iostream>
 #include <iomanip>
-#include <cassert>
 #include "printutil.h"
 #include "data/datatypes.h"
 

@@ -3,7 +3,6 @@
 #include "Benchmark.h"
 #include "../data/datatypes.h"
 #include "../meta.h"
-#include <vector>
 
 namespace benchmark {
 

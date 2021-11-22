@@ -1,5 +1,4 @@
 #include "BaselineArray.h"
-#include <iostream>
 
 namespace benchmark {
 

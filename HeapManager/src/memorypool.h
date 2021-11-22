@@ -1,7 +1,5 @@
 #pragma once
 
-#include <cassert>
-
 namespace pool {
 	
 	template<class T>
@@ -12,8 +10,7 @@ namespace pool {
 	};
 
 	/*PoolList, a SinglyLL solution for allocating memory to fixed size objects from a block.
-	No management is necessary. Once PoolList is destructed, all memory is freed.
-	Sees significant speedups when allocating many objects of the same size.*/
+	No management is necessary. Once PoolList is destructed, all memory is freed.*/
 
 	template<class T>
 	class PoolList {

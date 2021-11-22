@@ -18,10 +18,12 @@ int main()
 	}
 
 	SharedBenchmark b1 = std::make_shared<benchmark::Baseline>(g_benchManager.m_meta);
-	SharedBenchmark b2 = std::make_shared<benchmark::Improved>(g_benchManager.m_meta);
+	SharedBenchmark b2 = std::make_shared<benchmark::BaselineArray>(g_benchManager.m_meta);
+	SharedBenchmark b3 = std::make_shared<benchmark::Improved>(g_benchManager.m_meta);
 
 	g_benchManager.pushBenchmark(b1);
 	g_benchManager.pushBenchmark(b2);
+	g_benchManager.pushBenchmark(b3);
 	g_benchManager.runBenchmarks(g_benchManager.m_meta.benchmark_iterations);
 
 	g_benchManager.printAverages();

@@ -3,4 +3,5 @@
 //add files here
 
 #include "Baseline.h"
+#include "BaselineArray.h"
 #include "Improved.h"

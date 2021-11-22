@@ -156,6 +156,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\BenchmarkManager.cpp" />
     <ClCompile Include="src\benchmarks\Baseline.cpp" />
+    <ClCompile Include="src\benchmarks\BaselineArray.cpp" />
     <ClCompile Include="src\benchmarks\Benchmark.cpp" />
     <ClCompile Include="src\benchmarks\Improved.cpp" />
     <ClCompile Include="src\data\Point.cpp" />
@@ -165,6 +166,7 @@
   <ItemGroup>
     <ClInclude Include="src\BenchmarkManager.h" />
     <ClInclude Include="src\benchmarks\Baseline.h" />
+    <ClInclude Include="src\benchmarks\BaselineArray.h" />
     <ClInclude Include="src\benchmarks\Benchmark.h" />
     <ClInclude Include="src\benchmarks\benchmarktypes.h" />
     <ClInclude Include="src\benchmarks\Improved.h" />

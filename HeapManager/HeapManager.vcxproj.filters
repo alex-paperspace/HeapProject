@@ -57,6 +57,9 @@
     <ClCompile Include="src\benchmarks\Benchmark.cpp">
       <Filter>Source Files\src\benchmarks</Filter>
     </ClCompile>
+    <ClCompile Include="src\benchmarks\BaselineArray.cpp">
+      <Filter>Source Files\src\benchmarks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BenchmarkManager.h">
@@ -87,6 +90,9 @@
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
     <ClInclude Include="src\benchmarks\benchmarktypes.h">
+      <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\BaselineArray.h">
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
   </ItemGroup>

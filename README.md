@@ -8,10 +8,13 @@ This is a framework for developers to develop, run and compare heap allocation s
 
 - Standard new/delete -> O(n) context switches
 
+### BaselineArray:
+
+- Allocates all of the necessary memory using new[] and delete[]. Much faster than Baseline, but doesn't give the user any abstraction for when an object is allocated/deallocated.
+
 ### Improved:
 
-- Allocates all of the necessary memory upon instantiation using PoolList tool. Sees significant (10x) speedup over baseline when item count is high.
-
+- Allocates all of the necessary memory upon instantiation using PoolList tool. Basically new[] with minimal overhead for alloc/dealloc functionality and self-cleanup.
 ## Tools provided:
 
 #### Data Types
@@ -57,9 +60,9 @@ This is a framework for developers to develop, run and compare heap allocation s
 
 ## Some example runs
 
-Allocating 100,000,000 **Point** objects
+Allocating 50,000,000 **Point** objects
 
 *Baseline vs. Improved*
 
-<img src="https://user-images.githubusercontent.com/91897211/142773922-d0e46f0b-55a2-49bf-a478-c630715e7ea4.png" width="400">
+<img src="https://user-images.githubusercontent.com/91897211/142797963-9e2b93cf-c40a-46b4-a196-985d7cc25674.png" width="400">
 

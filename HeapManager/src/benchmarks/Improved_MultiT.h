@@ -15,8 +15,6 @@ namespace benchmark {
 	class Improved_MultiT : public Benchmark {
 	private:
 		int m_total_iterations;
-		int m_pvector1_size;
-		int m_pvector2_size;
 		std::vector<type_1 *> m_pvector1;
 		std::vector<type_2 *> m_pvector2;
 	protected:

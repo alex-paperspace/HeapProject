@@ -4,11 +4,9 @@
 namespace benchmark {
 
 	Improved_MultiT::Improved_MultiT(const int& iterations) :
-		m_total_iterations(iterations) , 
-		m_pvector1_size(iterations / 2) ,
-		m_pvector2_size(iterations / 2) ,
-		m_pvector1(iterations / 2) ,
-		m_pvector2(iterations / 2)
+		m_total_iterations((iterations > 1) ? iterations : 2 ), //for the very odd case of specifying 1 iteration (which doesn't make sense for this benchmark)
+		m_pvector1(m_total_iterations / 2) ,
+		m_pvector2(m_total_iterations / 2)
 	{
 		m_name = "Improved_MultiT";
 	}
@@ -17,7 +15,7 @@ namespace benchmark {
 	{
 		pool::FixedPool<type_1, type_2> mempool(m_total_iterations);
 
-		for (int i = 0; i < m_pvector1_size; ++i) {
+		for (int i = 0; i < m_pvector1.size(); ++i) {
 			m_pvector1[i] = new (mempool.allocate()) type_1;
 		}
 
@@ -35,7 +33,7 @@ namespace benchmark {
 		sizeof(Node<Types...>) is going to use the largest size of all the template types.
 		*/
 
-		for (int i = 0; i < m_pvector2_size; ++i) {
+		for (int i = 0; i < m_pvector2.size(); ++i) {
 			m_pvector2[i] = new (mempool.allocate()) type_2;
 		}
 	}

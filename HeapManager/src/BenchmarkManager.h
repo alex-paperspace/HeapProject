@@ -25,12 +25,10 @@ public:
 		return instance;
 	}
 
-	Meta m_meta;
-
 	void pushBenchmark(const SharedBenchmark& benchmark);
 	void runBenchmarks(int numEach = 1);
 
-	void setup();
+	void setup(Meta& meta);
 	void printAverages();	
 };
 

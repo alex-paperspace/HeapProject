@@ -19,7 +19,7 @@ namespace benchmark {
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		explicit BaseVariable(const Meta& meta);
+		explicit BaseVariable(const int& iterations);
 	};
 
 }

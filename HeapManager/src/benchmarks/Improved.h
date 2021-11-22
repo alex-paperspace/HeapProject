@@ -14,7 +14,7 @@ namespace benchmark {
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		explicit Improved(const Meta& meta);
+		explicit Improved(const int& iterations);
 	};
 
 }

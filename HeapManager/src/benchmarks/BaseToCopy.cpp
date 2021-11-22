@@ -3,15 +3,15 @@
 
 namespace benchmark {
 
-	BaseToCopy::BaseToCopy(const Meta & meta) //:
-		//initialize iteration # from meta.intra_benchmark_iterations
+	BaseToCopy::BaseToCopy(const int& iterations) //:
+		//initialize iteration count
 	{
 		m_name = "BaseToCopy";
 	}
 
 	void BaseToCopy::BenchmarkImpl()
 	{
-		//some heap benchmark
+		//heap benchmark goes here
 	}
 
 }

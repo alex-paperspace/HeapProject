@@ -2,9 +2,9 @@
 
 namespace benchmark {
 
-	Baseline::Baseline(const Meta& meta) :
-		m_pgeneric_vector_size(meta.intra_benchmark_iterations) ,
-		m_pgeneric_vector(meta.intra_benchmark_iterations)
+	Baseline::Baseline(const int& iterations) :
+		m_pgeneric_vector_size(iterations) ,
+		m_pgeneric_vector(iterations)
 	{
 		m_name = "Baseline";
 	}

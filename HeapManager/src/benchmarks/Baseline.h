@@ -14,7 +14,7 @@ namespace benchmark {
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		explicit Baseline(const Meta& meta);
+		explicit Baseline(const int& iterations);
 	};
 
 }

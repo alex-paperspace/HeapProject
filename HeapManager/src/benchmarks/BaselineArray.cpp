@@ -2,8 +2,8 @@
 
 namespace benchmark {
 
-	BaselineArray::BaselineArray(const Meta& meta) :
-		m_intra_iters(meta.intra_benchmark_iterations) ,
+	BaselineArray::BaselineArray(const int& iterations) :
+		m_intra_iters(iterations) ,
 		p_point_array(nullptr)
 	{
 		m_name = "BaselineArray";

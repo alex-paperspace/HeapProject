@@ -12,7 +12,7 @@ namespace benchmark {
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		explicit BaseToCopy(const Meta& meta);
+		explicit BaseToCopy(const int& iterations);
 	};
 
 }

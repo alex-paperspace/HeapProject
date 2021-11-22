@@ -38,7 +38,7 @@ void BenchmarkManager::runBenchmarks(int numEach) {
 	printutil::printBreak();
 }
 
-void BenchmarkManager::setup() {
+void BenchmarkManager::setup(Meta& meta) {
 	std::cout << "Welcome to Heap Benchmarker.\nPlease specify how many items each benchmark should allocate:\n";
 
 	{
@@ -50,8 +50,8 @@ void BenchmarkManager::setup() {
 			throw std::invalid_argument("Invalid inputs.");
 		}
 		else {
-			m_meta.intra_benchmark_iterations = intra;
-			m_meta.benchmark_iterations = iters;
+			meta.intra_benchmark_iterations = intra;
+			meta.benchmark_iterations = iters;
 		}
 	}
 	

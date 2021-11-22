@@ -3,9 +3,9 @@
 
 namespace benchmark {
 
-	Improved::Improved(const Meta& meta) :
-		m_pgeneric_vector_size(meta.intra_benchmark_iterations) ,
-		m_pgeneric_vector(meta.intra_benchmark_iterations) 
+	Improved::Improved(const int& iterations) :
+		m_pgeneric_vector_size(iterations) ,
+		m_pgeneric_vector(iterations) 
 	{
 		m_name = "Improved";
 	}

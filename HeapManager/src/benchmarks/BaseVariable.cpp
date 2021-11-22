@@ -3,11 +3,11 @@
 
 namespace benchmark {
 
-	BaseVariable::BaseVariable(const Meta & meta) :
-		m_pvector1_size(meta.intra_benchmark_iterations / 2) ,
-		m_pvector2_size(meta.intra_benchmark_iterations / 2) ,
-		m_pvector1(meta.intra_benchmark_iterations) ,
-		m_pvector2(meta.intra_benchmark_iterations)
+	BaseVariable::BaseVariable(const int& iterations) :
+		m_pvector1_size(iterations / 2) ,
+		m_pvector2_size(iterations / 2) ,
+		m_pvector1(iterations) ,
+		m_pvector2(iterations)
 	{
 		m_name = "benchmark";
 	}

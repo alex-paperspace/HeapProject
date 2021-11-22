@@ -13,7 +13,7 @@ namespace benchmark {
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		explicit BaselineArray(const Meta& meta);
+		explicit BaselineArray(const int& iterations);
 	};
 
 }

@@ -4,5 +4,5 @@
 
 #include "Baseline.h"
 #include "BaselineArray.h"
-#include "Improved.h"
-#include "BaseVariable.h"
+#include "Improved_OneT.h"
+#include "Improved_MultiT.h"

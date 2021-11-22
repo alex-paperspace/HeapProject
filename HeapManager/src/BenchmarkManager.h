@@ -16,7 +16,13 @@ private:
 	void operator=(BenchmarkManager const&) = delete;
 
 	std::queue<SharedBenchmark> m_benchmarksToRun;
-	std::map < std::string, double > m_averages;
+
+	typedef struct {
+		std::string name;
+		double average;
+	} averageId;
+
+	std::vector<averageId> m_averages;
 
 public:
 

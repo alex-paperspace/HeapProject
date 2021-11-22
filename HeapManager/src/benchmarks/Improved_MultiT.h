@@ -10,8 +10,11 @@ namespace benchmark {
 	typedef int type_1;
 	typedef double type_2;
 
-	class BaseVariable : public Benchmark {
+	//this can be refactored into a variadic template class if warranted
+
+	class Improved_MultiT : public Benchmark {
 	private:
+		int m_total_iterations;
 		int m_pvector1_size;
 		int m_pvector2_size;
 		std::vector<type_1 *> m_pvector1;
@@ -19,7 +22,7 @@ namespace benchmark {
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		explicit BaseVariable(const int& iterations);
+		explicit Improved_MultiT(const int& iterations);
 	};
 
 }

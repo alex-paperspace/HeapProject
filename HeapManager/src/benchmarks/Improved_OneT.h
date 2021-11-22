@@ -7,14 +7,14 @@
 
 namespace benchmark {
 
-	class Improved : public Benchmark {
+	class Improved_OneT : public Benchmark {
 	private:
 		int m_pgeneric_vector_size;
 		std::vector<Point *> m_pgeneric_vector;
 	protected:
 		void BenchmarkImpl() override;
 	public:
-		explicit Improved(const int& iterations);
+		explicit Improved_OneT(const int& iterations);
 	};
 
 }

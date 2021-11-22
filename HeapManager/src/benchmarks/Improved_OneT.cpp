@@ -1,16 +1,16 @@
-#include "Improved.h"
+#include "Improved_OneT.h"
 #include "../strats/fixedpool.h"
 
 namespace benchmark {
 
-	Improved::Improved(const int& iterations) :
+	Improved_OneT::Improved_OneT(const int& iterations) :
 		m_pgeneric_vector_size(iterations) ,
 		m_pgeneric_vector(iterations) 
 	{
-		m_name = "Improved";
+		m_name = "Improved_OneT";
 	}
 
-	void Improved::BenchmarkImpl() {
+	void Improved_OneT::BenchmarkImpl() {
 
 		pool::FixedPool<Point> mempool(m_pgeneric_vector_size); 
 

@@ -19,6 +19,7 @@ void BenchmarkManager::pushBenchmark(const SharedBenchmark& benchmark) {
 
 void BenchmarkManager::runBenchmarks(int numEach) {
 	while (!m_benchmarksToRun.empty()) {
+		printutil::printBreak();
 		SharedBenchmark currentBenchmark = m_benchmarksToRun.front();
 		m_benchmarksToRun.pop();
 		double average = 0;
@@ -27,11 +28,12 @@ void BenchmarkManager::runBenchmarks(int numEach) {
 			average += benchmarkTime;
 			std::cout << std::setw(15) << currentBenchmark->getName() \
 				<< std::setw(15) << i \
-				<< std::setw(15) << std::fixed << std::setprecision(6) << benchmarkTime \
+				<< std::setw(15) << std::fixed << std::setprecision(6) << benchmarkTime * 1000 \
 				<< std::endl;
 		}
 		average /= numEach;
-		m_averages[currentBenchmark->getName()] = average;
+		averageId temp = { currentBenchmark->getName() , average };
+		m_averages.push_back(temp);
 	}
 	printutil::printBreak();
 	std::cout << "All benchmarks finished." << std::endl;
@@ -61,9 +63,9 @@ void BenchmarkManager::setup(Meta& meta) {
 
 void BenchmarkManager::printAverages() {
 	printutil::printAverageHeader();
-	for (auto const& x : m_averages) {
-		std::cout << std::setw(15) << std::fixed << std::setprecision(6) << x.first \
-			<< std::setw(15) << std::fixed << std::setprecision(6) << x.second \
+	for (auto i = m_averages.begin(); i != m_averages.end(); ++i) {
+		std::cout << std::setw(15) << std::fixed << std::setprecision(6) << (*i).name \
+			<< std::setw(15) << std::fixed << std::setprecision(6) << (*i).average * 1000 \
 			<< std::endl;
 	}
 }

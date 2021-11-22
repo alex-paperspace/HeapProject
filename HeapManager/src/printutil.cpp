@@ -7,7 +7,7 @@ namespace printutil {
 	void printColumns() {
 		std::cout << std::setw(15) << "Benchmark-Name" \
 			<< std::setw(15) << "Iteration" \
-			<< std::setw(15) << "Time(s)" \
+			<< std::setw(15) << "Time(ms)" \
 			<< std::endl;
 	}
 
@@ -20,7 +20,7 @@ namespace printutil {
 
 	void printAverageHeader() {
 		std::cout << std::setw(15) << "Benchmark-Name" \
-			<< std::setw(15) << "Avg Time(s)" \
+			<< std::setw(15) << "Avg Time(ms)" \
 			<< std::endl;
 	}
 

@@ -42,9 +42,6 @@
     <ClCompile Include="src\benchmarks\Baseline.cpp">
       <Filter>Source Files\src\benchmarks</Filter>
     </ClCompile>
-    <ClCompile Include="src\benchmarks\Improved.cpp">
-      <Filter>Source Files\src\benchmarks</Filter>
-    </ClCompile>
     <ClCompile Include="src\data\Point.cpp">
       <Filter>Source Files\src\data</Filter>
     </ClCompile>
@@ -60,10 +57,13 @@
     <ClCompile Include="src\benchmarks\BaselineArray.cpp">
       <Filter>Source Files\src\benchmarks</Filter>
     </ClCompile>
-    <ClCompile Include="src\benchmarks\BaseVariable.cpp">
+    <ClCompile Include="src\benchmarks\BaseToCopy.cpp">
       <Filter>Source Files\src\benchmarks</Filter>
     </ClCompile>
-    <ClCompile Include="src\benchmarks\BaseToCopy.cpp">
+    <ClCompile Include="src\benchmarks\Improved_OneT.cpp">
+      <Filter>Source Files\src\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\benchmarks\Improved_MultiT.cpp">
       <Filter>Source Files\src\benchmarks</Filter>
     </ClCompile>
   </ItemGroup>
@@ -75,9 +75,6 @@
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="src\benchmarks\Baseline.h">
-      <Filter>Header Files\src\benchmarks</Filter>
-    </ClInclude>
-    <ClInclude Include="src\benchmarks\Improved.h">
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
     <ClInclude Include="src\data\Point.h">
@@ -98,16 +95,19 @@
     <ClInclude Include="src\benchmarks\BaselineArray.h">
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
-    <ClInclude Include="src\benchmarks\BaseVariable.h">
+    <ClInclude Include="src\benchmarks\BaseToCopy.h">
       <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\strats\pool_onet.h">
+      <Filter>Header Files\src\strats</Filter>
     </ClInclude>
     <ClInclude Include="src\strats\fixedpool.h">
       <Filter>Header Files\src\strats</Filter>
     </ClInclude>
-    <ClInclude Include="src\strats\variablepool.h">
-      <Filter>Header Files\src\strats</Filter>
+    <ClInclude Include="src\benchmarks\Improved_OneT.h">
+      <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
-    <ClInclude Include="src\benchmarks\BaseToCopy.h">
+    <ClInclude Include="src\benchmarks\Improved_MultiT.h">
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
   </ItemGroup>

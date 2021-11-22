@@ -21,13 +21,13 @@ int main()
 
 	SharedBenchmark b1 = std::make_shared<benchmark::Baseline>(meta.intra_benchmark_iterations);
 	SharedBenchmark b2 = std::make_shared<benchmark::BaselineArray>(meta.intra_benchmark_iterations);
-	SharedBenchmark b3 = std::make_shared<benchmark::Improved>(meta.intra_benchmark_iterations);
-	//SharedBenchmark b4 = std::make_shared<benchmark::BaseVariable>(meta.intra_benchmark_iterations);
+	SharedBenchmark b3 = std::make_shared<benchmark::Improved_OneT>(meta.intra_benchmark_iterations);
+	SharedBenchmark b4 = std::make_shared<benchmark::Improved_MultiT>(meta.intra_benchmark_iterations);
 
 	g_benchManager.pushBenchmark(b1);
 	g_benchManager.pushBenchmark(b2);
 	g_benchManager.pushBenchmark(b3);
-	//g_benchManager.pushBenchmark(b4);
+	g_benchManager.pushBenchmark(b4);
 
 	g_benchManager.runBenchmarks(meta.benchmark_iterations);
 

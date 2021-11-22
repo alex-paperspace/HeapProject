@@ -158,9 +158,9 @@
     <ClCompile Include="src\benchmarks\Baseline.cpp" />
     <ClCompile Include="src\benchmarks\BaselineArray.cpp" />
     <ClCompile Include="src\benchmarks\BaseToCopy.cpp" />
-    <ClCompile Include="src\benchmarks\BaseVariable.cpp" />
+    <ClCompile Include="src\benchmarks\Improved_MultiT.cpp" />
     <ClCompile Include="src\benchmarks\Benchmark.cpp" />
-    <ClCompile Include="src\benchmarks\Improved.cpp" />
+    <ClCompile Include="src\benchmarks\Improved_OneT.cpp" />
     <ClCompile Include="src\data\Point.cpp" />
     <ClCompile Include="src\printutil.cpp" />
   </ItemGroup>
@@ -169,16 +169,16 @@
     <ClInclude Include="src\benchmarks\Baseline.h" />
     <ClInclude Include="src\benchmarks\BaselineArray.h" />
     <ClInclude Include="src\benchmarks\BaseToCopy.h" />
-    <ClInclude Include="src\benchmarks\BaseVariable.h" />
+    <ClInclude Include="src\benchmarks\Improved_MultiT.h" />
     <ClInclude Include="src\benchmarks\Benchmark.h" />
     <ClInclude Include="src\benchmarks\benchmarktypes.h" />
-    <ClInclude Include="src\benchmarks\Improved.h" />
+    <ClInclude Include="src\benchmarks\Improved_OneT.h" />
     <ClInclude Include="src\data\datatypes.h" />
     <ClInclude Include="src\data\Point.h" />
     <ClInclude Include="src\meta.h" />
     <ClInclude Include="src\printutil.h" />
+    <ClInclude Include="src\strats\pool_onet.h" />
     <ClInclude Include="src\strats\fixedpool.h" />
-    <ClInclude Include="src\strats\variablepool.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

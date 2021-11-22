@@ -54,6 +54,7 @@ This is a framework for developers to develop, run and compare heap allocation s
 
 - The ability to create SharedBenchmark with runtime specified Benchmark type and data type and push to BenchmarkManager. (Tricky with templates, maybe enum mapping, but more dev responsibility)
 - Fragmentation analyzer of benchmarks. For example, a report of the Improved benchmark would (hopefully) report a fragmentation percentage of 0, since memory is only allocated based on (*item count \* sizeof(item)*).
+- Variable size data types (compile time and possibly runtime), this is when fragmentation can potentially start to occur.
 - Type checking when a client constructs their object in address returned by *allocate()*
 - Benchmark-dependent operator overloading, so the user does not have to use placement new.
 - Edge case not considered yet: Handling some T pointer passed into deallocate(T*& ptr) that was not originally in the PoolList.

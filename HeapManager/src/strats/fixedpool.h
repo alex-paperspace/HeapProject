@@ -13,11 +13,11 @@ namespace pool {
 	No management is necessary. Once PoolList is destructed, all memory is freed.*/
 
 	template<class T>
-	class PoolList {
+	class FixedPool {
 		Node<T>* const _head;
 		Node<T>* head;
 	public:
-		PoolList(int count) :
+		FixedPool(int count) :
 			_head((Node<T>*)calloc(count, sizeof(Node<T>))) ,
 			head(_head)
 		{
@@ -28,7 +28,7 @@ namespace pool {
 			}
 		}
 
-		~PoolList() {
+		~FixedPool() {
 			free(_head);
 		}
 

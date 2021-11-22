@@ -31,6 +31,9 @@
     <Filter Include="Source Files\src\benchmarks">
       <UniqueIdentifier>{5d428b80-1702-40ec-a447-63d8a81c703d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\src\strats">
+      <UniqueIdentifier>{762525c7-bd70-4f83-837c-cdd11d57adc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -57,12 +60,15 @@
     <ClCompile Include="src\benchmarks\BaselineArray.cpp">
       <Filter>Source Files\src\benchmarks</Filter>
     </ClCompile>
+    <ClCompile Include="src\benchmarks\BaseVariable.cpp">
+      <Filter>Source Files\src\benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\benchmarks\BaseToCopy.cpp">
+      <Filter>Source Files\src\benchmarks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BenchmarkManager.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\memorypool.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
     <ClInclude Include="src\printutil.h">
@@ -90,6 +96,18 @@
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
     <ClInclude Include="src\benchmarks\BaselineArray.h">
+      <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\BaseVariable.h">
+      <Filter>Header Files\src\benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\strats\fixedpool.h">
+      <Filter>Header Files\src\strats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\strats\variablepool.h">
+      <Filter>Header Files\src\strats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\benchmarks\BaseToCopy.h">
       <Filter>Header Files\src\benchmarks</Filter>
     </ClInclude>
   </ItemGroup>

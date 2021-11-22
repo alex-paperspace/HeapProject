@@ -1,5 +1,5 @@
 #include "Improved.h"
-#include "../memorypool.h"
+#include "../strats/fixedpool.h"
 
 namespace benchmark {
 
@@ -12,7 +12,7 @@ namespace benchmark {
 
 	void Improved::BenchmarkImpl() {
 
-		pool::PoolList<Point> mempool(m_pgeneric_vector_size); 
+		pool::FixedPool<Point> mempool(m_pgeneric_vector_size); 
 
 		for (int i = 0; i < m_pgeneric_vector_size; ++i) {
 			m_pgeneric_vector[i] = new (mempool.allocate()) Point();
